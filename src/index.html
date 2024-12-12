@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Questverse App</title>
+    <link rel="stylesheet" href="./css/styles.css" />
+    <link rel="stylesheet" href="./css/StudentCards.css" />
+    <link rel="stylesheet" href="./css/variables.css" />
+    <link rel="stylesheet" href="./css/minigames.css">
+  </head>
+  <body>
+    <div class="app-container">
+
+  
+      <!-- Top Navigation Bar -->
+<nav class="top-nav">
+  <div class="class-dropdown">
+    <label for="class-select" class="class-label"></label>
+    <select id="class-select" class="class-dropdown-menu">
+      <option value="4C">Select Class</option>
+      <option value="4C">Class 4C</option>
+      <option value="7C">Class 7C</option>
+      <option value="9A">Class 9A</option>
+    </select>
+  </div>
+</nav>
+
+      <!-- Sidebar -->
+      <aside class="sidebar">
+        <ul class="sidebar-menu">
+          <!-- Each list item corresponds to a page in the main content -->
+          <li data-page="dashboard">
+            <span class="icon">📊</span><span class="text">Dashboard</span>
+          </li>
+          <li data-page="students">
+            <span class="icon">👩‍🎓</span><span class="text">Students</span>
+          </li>
+          <li data-page="mini-games">
+            <span class="icon">🎮</span><span class="text">Mini-Games</span>
+          </li>
+          <li data-page="module-library">
+            <span class="icon">📚</span><span class="text">Module Library</span>
+          </li>
+          <li data-page="whiteboard">
+            <span class="icon">📝</span><span class="text">Whiteboard</span>
+        </ul>
+      </aside>
+
+      <!-- Main Content -->
+      <main class="main-content">
+        <!-- Each section corresponds to a page -->
+        <section id="dashboard" class="page">Welcome to the Dashboard, please scroll down or press "Students" on the left.
+          Oh ! And remember to select a class. 
+        </section>
+        <section id="students" class="page">
+          <h1>Students</h1>
+          <div class="students-header">
+            <!-- Search Bar -->
+            <input
+              type="text"
+              class="search-bar"
+              placeholder="🔍Search Students..."
+            />
+
+            <!-- Filter Options -->
+            <div class="filter-options">
+              <label for="filter" class="filter-label">
+                <span class="filter-icon"></span> 
+              </label>
+              <select id="filter" class="filter-dropdown">
+                <option value="all">All</option>
+                <option value="name">Sort by Name</option>
+                <option value="level">Sort by Level</option>
+                <option value="lastOnline">Sort by Last Online</option>
+                <option value="active">Active</option>
+              </select>
+            </div>
+
+            <!-- Add Student Button -->
+            <button class="add-student-btn">
+              <span class="icon">➕</span> Add Student
+            </button>
+
+            <!-- Modal for adding students (hidden by default) -->
+            <div class="modal hidden">
+              <div class="modal-content">
+                <h2>Add New Student</h2>
+                <form id="add-student-form">
+                  <!-- Step 1 -->
+                  <div class="form-step form-step-active">
+                    <label for="name">Name:</label>
+                    <input type="text" name="name" required />
+                    <button type="button" class="next-step-btn">Next</button>
+                  </div>
+                  <!-- Step 2 -->
+                  <div class="form-step">
+                    <label for="email">Email:</label>
+                    <input type="email" name="email" required />
+                    <button type="button" class="prev-step-btn">Back</button>
+                    <button type="submit">Add Student</button>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+          <div class="students-list">
+            <!-- Student cards will be dynamically loaded here -->
+          </div>
+        </section>
+        <section id="mini-games" class="page">
+          <h2 class="mini-games-title">Mini-Games Area</h2>
+          <div class="mini-games-container">
+            <!-- Card 1 -->
+            <div class="mini-game-card">
+              <h3 class="mini-game-title">Game 1</h3>
+              <p class="mini-game-description">A unique hybrid mini-game description goes here.</p>
+              <button class="mini-game-button">Play Now</button>
+            </div>
+        
+            <!-- Card 2 -->
+            <div class="mini-game-card">
+              <h3 class="mini-game-title">Game 2</h3>
+              <p class="mini-game-description">Another exciting mini-game description goes here.</p>
+              <button class="mini-game-button">Play Now</button>
+            </div>
+        
+            <!-- Card 3 -->
+            <div class="mini-game-card">
+              <h3 class="mini-game-title">Game 3</h3>
+              <p class="mini-game-description">Yet another engaging mini-game description goes here.</p>
+              <button class="mini-game-button">Play Now</button>
+            </div>
+          </div>
+        </section>
+        <section id="module-library" class="page">
+          Module Library Content
+        </section>
+        <section id="whiteboard" class="page">Whiteboard Tools</section>
+        <section id="settings" class="page">Settings Page</section>
+        <section id="profile" class="page">Your Profile</section>
+      </main>
+    </div>
+
+    <!-- Link to the JavaScript -->
+    <script src="./scripts/app.js"></script>
+    <script src="./scripts/students.js"></script>
+    <script src="./scripts/students-section.js"></script>
+    <script src="./scripts/AddStudent.js"></script>
+  </body>
+</html>

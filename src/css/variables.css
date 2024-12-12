@@ -1,0 +1,35 @@
+:root {
+    --primary-color: #1f2a3b;
+    --secondary-color: #384759;
+    --highlight-color: #00c4b3;
+    --highlight-hover: #00948b;
+    --background-light: #dce7ee;
+    --background-dark: #f9f9f9;
+    --page-background: "F7FAFF";
+    --background-gradient: linear-gradient(rgba(255, 255, 255, 0) 0%, rgba(0, 34, 128, 0.2) 100%);
+    --card-bg: rgb(245, 252, 255);
+    --card-hover-bg: #f8fffe;
+    --shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    --border-color: #b8beca;
+    --divider-color: #CBD4E1;
+
+
+
+    --font-color: #1e2233;
+    --font-color-light: rgb(241, 253, 255);
+    --font-family: 'Arial';
+    --font-family-card: 'System-ui';
+    --font-size-sm: 14px;
+    --font-size-md: 16px;
+    --font-size-lg: 20px;
+    --font-size-lg: 20px;
+
+
+    
+    --spacing-sm: 8px;
+    --spacing-md: 16px;
+    --spacing-lg: 24px;
+    --radius-sm: 4px;
+    --radius-md: 8px;
+    --radius-lg: 12px;
+}
